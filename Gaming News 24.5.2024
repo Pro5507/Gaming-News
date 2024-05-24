@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming News</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        .news-item {
+            border-bottom: 1px solid #ccc;
+            padding: 20px 0;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-title {
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+
+        .news-source {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top Gaming News - May 24, 2024</h1>
+        <div id="news"></div>
+    </div>
+    <script>
+        const newsData = [
+            { title: "TMNT: Mutants Unleashed Collector's Edition Announced", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Atari Acquires Intellivision Brand", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Neil Druckmann Teases New Naughty Dog Game", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Call of Duty: Black Ops 6 at Xbox Summer Showcase", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Ghost of Tsushima Director’s Cut Coming to PC", source: "Man of Many", url: "https://www.manofmany.com" },
+            { title: "Paper Mario: The Thousand-Year Door Remake Released", source: "Man of Many", url: "https://www.manofmany.com" },
+            { title: "MultiVersus Full Release", source: "Man of Many", url: "https://www.manofmany.com" },
+            { title: "F1 24 Launching Soon", source: "Man of Many", url: "https://www.manofmany.com" },
+            { title: "World of Goo 2 Released", source: "Man of Many", url: "https://www.manofmany.com" },
+            { title: "Elden Ring: Shadow of the Erdtree DLC Trailer", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "New Trailer for The Witcher Season 4", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Hellblade II Reviews", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Jason Voorhees in MultiVersus", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Kingdom Hearts on Steam", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "NBA Superstars Arcade Game", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Hunt: Showdown Console Update", source: "Game Informer", url: "https://www.gameinformer.com" },
+            { title: "Rogue Prince of Persia Early Access", source: "Man of Many", url: "https://www.manofmany.com" },
+            { title: "Endless Ocean Luminous Released", source: "Man of Many", url: "https://www.manofmany.com" }
+        ];
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const newsContainer = document.getElementById("news");
+            newsData.forEach(news => {
+                const newsItem = document.createElement("div");
+                newsItem.className = "news-item";
+                newsItem.innerHTML = `
+                    <h2 class="news-title"><a href="${news.url}" target="_blank">${news.title}</a></h2>
+                    <p class="news-source">Source: ${news.source}</p>
+                `;
+                newsContainer.appendChild(newsItem);
+            });
+        });
+    </script>
+</body>
+</html>
